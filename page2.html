@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itachi Uchiha</title>
+
+    <style> 
+        #backgroundVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        body {
+            color: #ffffff; 
+            font-family: Impact, fantasy;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin-top: 100px;
+            text-shadow: 2px 2px 8px black;
+            font-size: 50px;
+        }   
+        h1 {  
+            color: white; 
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-family:  'Impact', 'Papyrus', 'Chiller', 'fantasy';;
+        }
+        p {
+            font-size: x-large;
+            font-style: italic;
+        }   
+        button {
+            background-color: rgb(118, 3, 22);
+            height: 100px; 
+            border-radius: 50px;
+            border: 2px solid black;
+            cursor: pointer;
+            box-shadow: 0 4px 0 rgb(2, 0, 0);
+            transition: all 0.05s ease-in-out; 
+            font-family: 'Georgia' 'Times New Roman', 'Times, serif'
+            font-size: large;
+            width: 550px;              
+            min-height: 160px;         
+            padding: 30px;             
+            display: flex;
+            flex-direction: column;    
+            justify-content: center;   
+            align-items: center;       
+            text-align: center;        
+            margin-top: 10px;
+            color: white;
+        }
+        button:active {
+            box-shadow: 0 0px 0 rgb(77, 6, 18);
+            transform: translateY(4px);
+            background-color: rgb(0, 0, 0);
+        }
+        
+        #btn-two {
+            display: none;
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0 4px 0 rgb(118, 3, 22);
+            font-family:  'Georgia', 'Times New Roman', 'Times, serif';
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="itachi.mp4" type="video/MP4">
+    </video>
+    
+    <h1>Itachi Uchiha</h1>
+    <p>"No matter what you become, I will always love you."</p>
+
+
+    <button id="btn-one" onclick="this.style.display = 'none'; document.getElementById('btn-two').style.display = 'flex';">"Do not 
+        speak, just listen.  Three nights ago, the Scroll of Forbidden Seals was stolen 
+        from the Hidden Leaf village. As we speak, a rogue ninja cell is transporting it through 
+        the valley just north of here.  My part in this is already finished; the secrets within that scroll
+         cannot fall into the wrong hands, 
+        and the path to retrieve it is yours alone to walk."</button>
+<button id="btn-two" onclick="window.location.href='page3.html';">
+    Before the echo of his voice could even fade, a sudden gust of wind whipped through the trees, 
+    scattering dozens of jet-black feathers across the clearing. When the air cleared, 
+    the stone monument was completely empty, leaving you standing alone in the pouring rain with a choice to make.
+</button>
+    </body>
+</html>

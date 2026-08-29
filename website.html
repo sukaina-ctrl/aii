@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The perfect day</title>
+  <style> 
+    .naruto_jutsu {
+      background-color: rgb(118, 3, 22);
+      height: 100px; 
+      border-radius: 50px;
+      border: 2px solid black;
+      cursor: pointer;
+      box-shadow: 0 4px 0 rgb(2, 0, 0);
+      transition: all 0.05s ease-in-out; 
+      margin-left: 500px;
+      font-family: 'Impact', 'Papyrus', 'Chiller', 'fantasy';
+      font-size: large;
+      width: 550px;              
+      min-height: 160px;         
+      padding: 30px;             
+      display: flex;
+      flex-direction: column;    
+      justify-content: center;   
+      align-items: center;       
+      text-align: center;        
+      margin-top: 150px;
+    } 
+
+    .naruto_jutsu:active {
+      box-shadow: 0 0px 0 rgb(77, 6, 18);
+      transform: translateY(4px);
+      background-color: rgb(0, 0, 0);
+    }
+
+    .music_control {  
+      background-color: rgb(118, 3, 22);
+      height: 100px; 
+      border-radius: 50px;
+      border: 2px solid black;
+      cursor: pointer;
+      box-shadow: 0 4px 0 rgb(2, 0, 0);
+      transition: all 0.05s ease-in-out; 
+      margin-left: 500px;
+      font-family: 'Impact', 'Papyrus', 'Chiller', 'fantasy';
+      font-size: large;
+      width: 550px;              
+      min-height: 160px;         
+      padding: 30px;             
+      display: flex;
+      flex-direction: column;    
+      justify-content: center;   
+      align-items: center;       
+      text-align: center;        
+      margin-top: 30px;
+    }
+
+    .music_control:active {
+      box-shadow: 0 0px 0 rgb(77, 6, 18);
+      transform: translateY(4px);
+      background-color: rgb(0, 0, 0);
+    }
+
+    body { 
+      background-image: url('pain.jpg'); 
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Action Button -->
+  <button class="naruto_jutsu" onclick="
+      document.getElementById('naruto_jutsu').play();
+      setTimeout('window.location.href=\'page2.html\'', 1000);
+  ">
+     I see your here to have your perfect day huh ? I have heard you like taking on mission..
+     Well fine... I was sent here by nagato to assist you...
+     Click this button to get started ~????
+  </button>
+
+  <!-- Music Control Button (No var, no functions) -->
+  <button class="music_control" onclick="
+      if (document.getElementById('music').paused) {
+          document.getElementById('music').play();
+          this.innerText = '🔊 Pause Background Music';
+      } else {
+          document.getElementById('music').pause();
+          this.innerText = '🔈 Play Background Music';
+      }
+  ">
+     🔈 Play Background Music 
+  </button>
+
+  <!-- Audio elements using clean relative paths -->
+  <audio id="naruto_jutsu" src="naruto_jutsu.mp3"></audio>
+  <audio id="music" src="music.mp3" loop></audio>
+
+</body>
+</html>
